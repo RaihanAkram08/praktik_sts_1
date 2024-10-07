@@ -18,23 +18,29 @@ function validatePhoneNumberNull(phone) { // Membuat Function untuk validasi apa
     }
 }
 
-function validateCharacter(phone) { // Membuat function untuk validasi apakah inputan kosong lebih dari 10 karakter atau tidak
+function validateCharacter(phone) { // Membuat function untuk validasi apakah inputan lebih dari 10 karakter atau tidak
     if (phone.length < 10 && phone.length > 13) {
-        console.log("Nomor HP minimal berisi 10 character dan harus kurang dari 14 character")
+        console.log("Nomor HP harus berisi antara 10 sampai 13 karakter")
     } else {
         return true;
     }
 }
 
+// function validateNumber(phone) {
+//     if (!Number.isInteger(phone)) {
+//         console.log("Nomor HP hanya boleh berisi angka");
+//     } else {
+//         return true;
+//     }
+// }
+
 function validateNumber(phone) {
-    if (typeof phone !== "number") {
-        console.log("Nomor HP hanya boleh berisi angka")
-    } else {
-        return true;
-    }
+    if (phone.includes("abcdefghijklmnopqrstuvwxyz")) {
+        console.log("Nomor HP hanya boleh berisi angka");
+    } 
 }
 
 console.log(validatePhoneNumber("")); // Output : Nomor HP tidak boleh kosong Nomor HP Tidak Valid
-console.log(validatePhoneNumber("0812345")); // Output : Nomor HP minimal berisi 10 character dan harus kurang dari 14 character Nomor HP Tidak Valid
-console.log(validatePhoneNumber("0812345abc")); // Output : Nomor HP Valid
+console.log(validatePhoneNumber("08123")); // Output : Nomor HP minimal berisi 10 character dan harus kurang dari 14 character Nomor HP Tidak Valid
+console.log(validatePhoneNumber("0812345abc")); // Output : Nomor HP hanya boleh berisi angka Nomor HP Tidak Valid
 console.log(validatePhoneNumber("08123456789")); // Output : Nomor HP Valid
