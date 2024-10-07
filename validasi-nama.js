@@ -26,6 +26,6 @@ function validateCharacter(name) { // Membuat function untuk validasi apakah inp
 }
 
 console.log(validateName("")); // Output : Nama tidak boleh kosong Nama Tidak Valid
-console.log(validateName("Ra")); // Output : Nama harus lebih dari 2 character  Nama Tidak Valid
+console.log(validateName("Ra")); // Output : Nama harus lebih dari 2 character Nama Tidak Valid
 console.log(validateName("Rai")); // Output : Nama Valid
 console.log(validateName("Raihan")); // Output : Nama Valid
